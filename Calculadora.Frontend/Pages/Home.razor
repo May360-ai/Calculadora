@@ -139,7 +139,7 @@
 
     private void OnEqualsClick()
     {
-        if (_operator == null) return;
+        if (_operator == null || _isNewNumber) return;
 
         // CAMBIO 2: Usar Cultura Invariante
         decimal operand2 = decimal.Parse(_display, CultureInfo.InvariantCulture);
