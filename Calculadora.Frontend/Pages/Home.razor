@@ -97,11 +97,14 @@
         _historial = await RegistroService.ObtenerRegistrosAsync();
     }
 
+    // PASO 1 (FRONTEND): Se invoca desde la UI al hacer clic en "Guardar".
+    // Llama al servicio del frontend para iniciar la comunicación con el backend.
     private async Task GuardarCalculo()
     {
         if (string.IsNullOrWhiteSpace(_nombreDescriptivo) || _resultadoParaGuardar == null) return;
 
         var nuevoRegistro = new GuardarRegistroRequest(_nombreDescriptivo, _resultadoParaGuardar.Value);
+        // Llama al PASO 2
         await RegistroService.GuardarRegistroAsync(nuevoRegistro);
 
         _nombreDescriptivo = "";
@@ -109,7 +112,7 @@
         await CargarHistorial();
     }
     
-    // ---- Métodos para la Lógica de la Calculadora (CORREGIDOS) ----
+   
     private void OnNumberClick(string number)
     {
         if (_isNewNumber)

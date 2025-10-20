@@ -36,6 +36,15 @@ builder.Services.AddScoped<IRegistroService, RegistroService>();
 
 var app = builder.Build();
 
+// --- Asegurar que la base de datos se cree al iniciar (Buena práctica) ---
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<CalculadoraDbContext>();
+    // Esto crea la base de datos y el esquema si no existen.
+    context.Database.EnsureCreated();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

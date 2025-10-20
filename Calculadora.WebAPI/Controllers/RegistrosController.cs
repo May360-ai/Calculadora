@@ -21,8 +21,11 @@ namespace Calculadora.WebAPI.Controllers
 
         // POST /api/registros
         [HttpPost]
+        // PASO 3 (BACKEND - API): Recibe la petición HTTP desde el frontend.
+        // No contiene lógica, solo delega la tarea a la capa de aplicación.
         public async Task<IActionResult> GuardarRegistro([FromBody] GuardarRegistroRequest request)
         {
+            // Llama al PASO 4
             var registroGuardado = await _registroService.GuardarCalculoAsync(
                 request.NombreDescriptivo,
                 request.Resultado

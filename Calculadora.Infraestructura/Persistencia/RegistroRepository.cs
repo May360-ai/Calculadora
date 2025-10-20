@@ -16,6 +16,8 @@ namespace Calculadora.Infraestructura.Persistencia
             _contexto = contexto;
         }
 
+        // PASO 5 (BACKEND - Infraestructura): Implementación concreta que interactúa con la base de datos.
+        // Usa Entity Framework Core para guardar el registro en la tabla.
         public async Task<RegistroCalculo> AgregarAsync(RegistroCalculo registro)
         {
             _contexto.Registros.Add(registro);

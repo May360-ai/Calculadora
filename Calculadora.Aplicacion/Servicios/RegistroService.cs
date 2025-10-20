@@ -16,6 +16,8 @@ namespace Calculadora.Aplicacion.Servicios
             _registroRepository = registroRepository;
         }
 
+        // PASO 4 (BACKEND - Aplicación): Contiene la lógica de negocio.
+        // Crea la entidad y usa la interfaz del repositorio para persistir los datos.
         public async Task<RegistroCalculo> GuardarCalculoAsync(string nombre, decimal resultado)
         {
             if (string.IsNullOrWhiteSpace(nombre))
@@ -30,6 +32,7 @@ namespace Calculadora.Aplicacion.Servicios
                 FechaRegistro = DateTime.UtcNow
             };
 
+            // Llama al PASO 5
             return await _registroRepository.AgregarAsync(nuevoRegistro);
         }
 

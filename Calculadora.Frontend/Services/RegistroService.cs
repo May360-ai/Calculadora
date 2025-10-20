@@ -15,13 +15,15 @@ namespace Calculadora.Frontend.Services
 
         public async Task<List<RegistroCalculoDto>> ObtenerRegistrosAsync()
         {
-            // Llama al endpoint GET /api/registros
+           
             return await _httpClient.GetFromJsonAsync<List<RegistroCalculoDto>>("api/registros");
         }
 
+        // PASO 2 (FRONTEND): Realiza la llamada HTTP POST al backend.
+        // Envía los datos del nuevo registro a la WebAPI.
         public async Task GuardarRegistroAsync(GuardarRegistroRequest nuevoRegistro)
         {
-            // Llama al endpoint POST /api/registros
+            // Llama al PASO 3 en el backend
             await _httpClient.PostAsJsonAsync("api/registros", nuevoRegistro);
         }
     }

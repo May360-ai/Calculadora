@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Calculadora.Frontend",
   "resources": {
-    "hash": "sha256-VlA9Uuau0OcAp6dzYb8ZvkEn9xKeW+z5eYYPVLcalcw=",
+    "hash": "sha256-ZUlmAw3E0z32ERnmq1AYIpkzxPV2U+lDPOZWQV61gVc=",
     "jsModuleNative": {
       "dotnet.native.8.0.20.p3zubkjzl4.js": "sha256-D0bzod5lwwSzPR43JC8TTCcZKw+3jIHOk8CZFCRj5is="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-8qWtIcy8fV43tlcx4DxsF45RlkcfK6588vVoxF7be2E=",
       "netstandard.wasm": "sha256-eOgz2RiO4YaPLOMIGgVLNrcfsQhmLQJzR0N7Pu2teXc=",
       "System.Private.CoreLib.wasm": "sha256-F8T63QCIbMPXPQPqTcuyBAw+oVvZSrWjy88j7fiJQZ4=",
-      "Calculadora.Frontend.wasm": "sha256-sHtXVSmH1+eEG4ecYL/R6ROwCwjvRCY4GHwB1u6w8ZE="
+      "Calculadora.Frontend.wasm": "sha256-CDg5gpBXrM5VQkJ97QozRci5VZpyNwPtjqlW26F0jZM="
     },
     "pdb": {
-      "Calculadora.Frontend.pdb": "sha256-ANLet1wRB1uwg28AXPIZvHMrUNr2P5n868VF0hp1mNs="
+      "Calculadora.Frontend.pdb": "sha256-cGuyN1rPe1ni9O2b2J/5qN/czUyKE5MBBX21A7ud0NQ="
     }
   },
   "cacheBootResources": true,
